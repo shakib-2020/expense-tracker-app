@@ -15,41 +15,28 @@ A mobile expense tracker built with **React Native**, focused on applying **Java
 - 📱 Clean and user-friendly UI
 
 ---
-
 ## 💡 OOP Concepts Used
 
-This project is designed to demonstrate real-world use of **Object-Oriented Programming (OOP)** in JavaScript within a React Native app.
+✅ **Class-Based Structure**  
+Used dedicated classes like `ExpenseManager`, `CategoryManager`, `Transaction`, and `Expense` to manage the core logic of the app in an organized, reusable way.
 
-- ✅ **Class**  
-  The core logic is encapsulated inside the `ExpenseManager` class (`src/oop/ExpenseManager.js`).  
-  It handles:
-  - Adding, deleting, and filtering expenses
-  - Managing categories
-  - Business logic separation from UI
+✅ **Encapsulation**  
+Internal state and methods (e.g., managing expenses, categories) are encapsulated within classes, exposing only necessary public methods like `addExpense()` and `getCategories()`.
 
-- ✅ **Encapsulation**  
-  The internal logic (like how expenses are stored or processed) is hidden inside the class.  
-  Components interact with the class via public methods like:
-  - `addExpense()`
-  - `deleteExpense()`
-  - `filterExpensesByDate()`
+✅ **Abstraction**  
+The UI components interact with these classes through simple method calls, without needing to understand internal logic — promoting clear separation of concerns.
 
-- ✅ **Abstraction**  
-  Components using `ExpenseManager` don’t need to know *how* data is stored or filtered — they just call methods and get results.  
-  This makes the app more readable and easier to maintain.
+✅ **Inheritance**  
+`Expense` class extends the base `Transaction` class, reusing shared functionality between transaction types — demonstrating classic inheritance in practice.
 
-- ✅ **Composition**  
-  The app is built with **small, reusable components** (`ExpenseForm`, `ExpenseList`, `ExpenseChart`, etc.)  
-  These components are composed together to build screens and enhance modularity.
+✅ **Composition**  
+Built with focused, reusable components (`ExpenseForm`, `ExpenseList`, `CategoryManager`, etc.) and composed them to build a clean, interactive UI.
 
-- ✅ **Single Responsibility Principle (SRP)**  
-  Each file/class/component does one job:
-  - `ExpenseManager.js` → business logic  
-  - `useStorage.js` → persistent data handling  
-  - `ExpenseChart.js` → chart rendering  
-  - `ExpenseForm.js` → input form for user data
+✅ **Single Responsibility Principle (SRP)**  
+Each class (e.g., `ExpenseManager`, `CategoryManager`) and component has one clearly defined responsibility, keeping code modular and maintainable.
 
-
+✅ **Clean and Modular Architecture**  
+Project is organized into folders like `managers/`,`models/`, `hooks/`, `components/`, and `utils/` — separating logic, UI, and helpers for better scalability and structure.
 
 ---
 
