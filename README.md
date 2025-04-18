@@ -73,8 +73,6 @@ npx expo start
 
 ---
 
-##MIT
-
 Made with ❤️ by Shakib
 
 
