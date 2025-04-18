@@ -7,7 +7,7 @@ const HomeHeroCard = ({ totalExpenses, addExpenseClick, addCategoryClick }) => {
 
   return (
     <View style={styles.heroCard}>
-      <Text style={styles.expenseAmount}>${totalExpenses.toFixed(2)}</Text>
+      <Text style={styles.expenseAmount}>৳{totalExpenses.toFixed(2)}</Text>
       <Text style={styles.subText}>Total Expenses This Month</Text>
       <View style={styles.buttonWrapper}>
         <TouchableOpacity style={styles.addButton} onPress={addExpenseClick}>
