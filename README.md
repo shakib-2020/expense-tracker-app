@@ -57,7 +57,7 @@ This project is designed to demonstrate real-world use of **Object-Oriented Prog
 
 | Home Screen | Add Expenses | Add Categories |
 |-------------|------------|------------|
-| ![home](./assets/screens/home.png) | ![addExpenses](./assets/screens/chart.png) | ![addCategories](./assets/screens/categories.png) |
+| ![home](./screenshot/home.png) | ![addExpenses](./screenshot/expenses.png) | ![addCategories](./screenshot/categories.png) |
 
 ---
 
@@ -67,7 +67,8 @@ This project is designed to demonstrate real-world use of **Object-Oriented Prog
 git clone https://github.com/your-username/expense-tracker-oop.git
 cd expense-tracker-oop
 npm install
-npx expo start
+npx expo run:android (for android)
+npx expo run:ios (for ios)
 
 ```
 
