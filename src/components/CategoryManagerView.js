@@ -7,7 +7,9 @@ import {
   FlatList,
   Text,
   StyleSheet,
+  Pressable,
 } from "react-native";
+import { COLORS } from "../theme/Colors";
 
 export default function CategoryManagerView({
   categories,
@@ -28,10 +30,25 @@ export default function CategoryManagerView({
 
   const renderCategoryItem = ({ item }) => (
     <View style={styles.categoryItem}>
-      <Text>
+      <Text
+        style={{
+          fontSize: 16,
+        }}
+      >
         {item.icon} {item.name}
       </Text>
-      <Button title="Delete" onPress={() => onDeleteCategory(item.name)} />
+      <Pressable
+        onPress={() => onDeleteCategory(item.name)}
+        style={styles.deleteBtn}
+      >
+        <Text
+          style={{
+            fontSize: 18,
+          }}
+        >
+          🗑️
+        </Text>
+      </Pressable>
     </View>
   );
 
@@ -49,7 +66,11 @@ export default function CategoryManagerView({
         value={categoryIcon}
         onChangeText={setCategoryIcon}
       />
-      <Button title="Add Category" onPress={handleAddCategory} />
+      <Button
+        color={COLORS.primaryDark}
+        title="Add Category"
+        onPress={handleAddCategory}
+      />
 
       <FlatList
         data={categories}
@@ -66,6 +87,6 @@ const styles = StyleSheet.create({
   categoryItem: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 10,
+    marginTop: 10,
   },
 });
