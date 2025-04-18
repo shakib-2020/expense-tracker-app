@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { View, TextInput, Button, Text, StyleSheet } from "react-native";
 import { Picker } from "@react-native-picker/picker";
+import { COLORS } from "../theme/Colors";
 export default function ExpenseForm({ categories, onAddExpense }) {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
@@ -52,7 +53,11 @@ export default function ExpenseForm({ categories, onAddExpense }) {
         ))}
       </Picker>
 
-      <Button title="Add Expense" onPress={handleSubmit} />
+      <Button
+        color={COLORS.primaryDark}
+        title="Add Expense"
+        onPress={handleSubmit}
+      />
     </View>
   );
 }

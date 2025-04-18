@@ -9,9 +9,7 @@ export default class Expense extends Transaction {
   }
 
   getDetails() {
-    return `${this.description} | $${this.amount} | ${
-      this.category?.name || "Uncategorized"
-    } on ${this.date.toDateString()}`;
+    return `${this.description} on ${this.date.toDateString()}`;
   }
 
   toJSON() {

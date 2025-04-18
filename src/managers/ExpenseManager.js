@@ -8,6 +8,10 @@ export default class ExpenseManager {
     this.#expenses.push(expense);
   }
 
+  deleteExpense(item) {
+    this.#expenses = this.#expenses.filter((expense) => expense !== item);
+  }
+
   getAll() {
     return [...this.#expenses];
   }
